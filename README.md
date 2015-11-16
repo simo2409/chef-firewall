@@ -1,7 +1,7 @@
 firewall Cookbook
 =================
 This cookbook is much opinionated.
-This cookbook uses CentOS 7, doesn't like firewalld and loves iptables.
+This cookbook works on CentOS 7, doesn't like firewalld and loves iptables.
 
 With this cookbook you can define rules for your iptables on CentOS 7.
 
