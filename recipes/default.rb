@@ -46,6 +46,11 @@ package 'firewalld' do
   action :remove
 end
 
+# Adds monit port if recipe is present
+if node["monit"]["web_interface"]["port"]
+  node["firewall"]["open_ports"]["tcp"] << node["monit"]["web_interface"]["port"]
+end
+
 # Setup iptables config
 template node["firewall"]["conf"]["path"] do
   source "iptables.erb"
